@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -18,8 +17,8 @@ type PracticaAcademica struct {
 	ProyectoCurricularId     int                     `orm:"column(proyecto_curricular_id)"`
 	ValorAvance              float64                 `orm:"column(valor_avance)"`
 	ValorReintegro           float64                 `orm:"column(valor_reintegro)"`
-	FechaCreacion            time.Time               `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion        time.Time               `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	FechaCreacion            string                  `orm:"column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion        string                  `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
 	Activo                   bool                    `orm:"column(activo)"`
 }
 

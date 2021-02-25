@@ -5,17 +5,16 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
 
 type SolicitudAvance struct {
-	Id                int       `orm:"column(id);pk;auto"`
-	SolicitudId       int       `orm:"column(solicitud_id)"`
-	FechaCreacion     time.Time `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion time.Time `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
-	Activo            bool      `orm:"column(activo)"`
+	Id                int    `orm:"column(id);pk;auto"`
+	SolicitudId       int    `orm:"column(solicitud_id)"`
+	FechaCreacion     string `orm:"column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion string `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	Activo            bool   `orm:"column(activo)"`
 }
 
 func (t *SolicitudAvance) TableName() string {

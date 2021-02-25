@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -24,8 +23,8 @@ type Reintegro struct {
 	Justificacion        string              `orm:"column(justificacion)"`
 	NumeroOrden          float64             `orm:"column(numero_orden)"`
 	Disponible           bool                `orm:"column(disponible)"`
-	FechaCreacion        time.Time           `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion    time.Time           `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	FechaCreacion        string              `orm:"column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion    string              `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
 	Activo               bool                `orm:"column(activo)"`
 }
 

@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -15,8 +14,8 @@ type AvanceLegalizacionTipo struct {
 	TipoAvanceLegalizacioId int                 `orm:"column(tipo_avance_legalizacio_id)"`
 	AvanceLegalizacionId    *AvanceLegalizacion `orm:"column(avance_legalizacion_id);rel(fk)"`
 	Vigencia                int                 `orm:"column(vigencia)"`
-	FechaCreacion           time.Time           `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion       time.Time           `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	FechaCreacion           string              `orm:"column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion       string              `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
 	Activo                  bool                `orm:"column(activo)"`
 }
 

@@ -5,21 +5,20 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
 
 type TipoAvance struct {
-	Id                int       `orm:"column(id);pk;auto"`
-	CodigoAbreviacion string    `orm:"column(codigo_abreviacion)"`
-	AreaFuncional     int       `orm:"column(area_funcional)"`
-	Nombre            string    `orm:"column(nombre)"`
-	Descripcion       string    `orm:"column(descripcion)"`
-	NumeroOrden       float64   `orm:"column(numero_orden)"`
-	FechaCreacion     time.Time `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion time.Time `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
-	Activo            bool      `orm:"column(activo)"`
+	Id                int     `orm:"column(id);pk;auto"`
+	CodigoAbreviacion string  `orm:"column(codigo_abreviacion)"`
+	AreaFuncional     int     `orm:"column(area_funcional)"`
+	Nombre            string  `orm:"column(nombre)"`
+	Descripcion       string  `orm:"column(descripcion)"`
+	NumeroOrden       float64 `orm:"column(numero_orden)"`
+	FechaCreacion     string  `orm:"column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion string  `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	Activo            bool    `orm:"column(activo)"`
 }
 
 func (t *TipoAvance) TableName() string {

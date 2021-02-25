@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -15,8 +14,8 @@ type Norma struct {
 	TipoAvanceId      *TipoAvance `orm:"column(tipo_avance_id);rel(fk)"`
 	Vigencia          int         `orm:"column(vigencia)"`
 	LinkNorma         string      `orm:"column(link_norma)"`
-	FechaCreacion     time.Time   `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion time.Time   `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	FechaCreacion     string      `orm:"column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion string      `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
 	Activo            bool        `orm:"column(activo)"`
 }
 
