@@ -11,7 +11,7 @@ import (
 )
 
 type Movimiento struct {
-	Id                   int                 `orm:"column(id);pk"`
+	Id                   int                 `orm:"column(id);pk;auto"`
 	TipoMovimientoId     int                 `orm:"column(tipo_movimiento_id)"`
 	AvanceLegalizacionId *AvanceLegalizacion `orm:"column(avance_legalizacion_id);rel(fk)"`
 	FechaCreacion        time.Time           `orm:"column(fecha_creacion);type(timestamp without time zone)"`

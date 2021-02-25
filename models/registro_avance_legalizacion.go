@@ -11,7 +11,7 @@ import (
 )
 
 type RegistroAvanceLegalizacion struct {
-	Id                       int                     `orm:"column(id);pk"`
+	Id                       int                     `orm:"column(id);pk;auto"`
 	AvanceLegalizacionTipoId *AvanceLegalizacionTipo `orm:"column(avance_legalizacion_tipo_id);rel(fk)"`
 	FechaEvento              time.Time               `orm:"column(fecha_evento);type(timestamp without time zone)"`
 	TipoDocumentoTerceroId   int                     `orm:"column(tipo_documento_tercero_id)"`

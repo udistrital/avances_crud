@@ -11,7 +11,7 @@ import (
 )
 
 type Norma struct {
-	Id                int         `orm:"column(id);pk"`
+	Id                int         `orm:"column(id);pk;auto"`
 	TipoAvanceId      *TipoAvance `orm:"column(tipo_avance_id);rel(fk)"`
 	Vigencia          int         `orm:"column(vigencia)"`
 	LinkNorma         string      `orm:"column(link_norma)"`

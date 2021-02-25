@@ -11,7 +11,7 @@ import (
 )
 
 type OrdenPagoAvanceLegalizacion struct {
-	Id                   int                 `orm:"column(id);pk"`
+	Id                   int                 `orm:"column(id);pk;auto"`
 	AvanceLegalizacionId *AvanceLegalizacion `orm:"column(avance_legalizacion_id);rel(fk)"`
 	Vigencia             int                 `orm:"column(vigencia)"`
 	OrdenPagoId          int                 `orm:"column(orden_pago_id)"`

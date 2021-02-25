@@ -11,7 +11,7 @@ import (
 )
 
 type EstadoLegalizacionAvanceLegalizacion struct {
-	Id                   int                 `orm:"column(id);pk"`
+	Id                   int                 `orm:"column(id);pk;auto"`
 	EstadoLegalizacionId int                 `orm:"column(estado_legalizacion_id)"`
 	AvanceLegalizacionId *AvanceLegalizacion `orm:"column(avance_legalizacion_id);rel(fk)"`
 	Observaciones        string              `orm:"column(observaciones)"`

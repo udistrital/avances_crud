@@ -11,7 +11,7 @@ import (
 )
 
 type InformacionEstudiante struct {
-	Id                  int                `orm:"column(id);pk"`
+	Id                  int                `orm:"column(id);pk;auto"`
 	PracticaAcademicaId *PracticaAcademica `orm:"column(practica_academica_id);rel(fk)"`
 	Codigo              string             `orm:"column(codigo)"`
 	Dias                int                `orm:"column(dias)"`

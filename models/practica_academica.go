@@ -11,7 +11,7 @@ import (
 )
 
 type PracticaAcademica struct {
-	Id                       int                     `orm:"column(id);pk"`
+	Id                       int                     `orm:"column(id);pk;auto"`
 	AvanceLegalizacionTipoId *AvanceLegalizacionTipo `orm:"column(avance_legalizacion_tipo_id);rel(fk)"`
 	FechaPractica            int                     `orm:"column(fecha_practica)"`
 	DestinoId                int                     `orm:"column(destino_id)"`

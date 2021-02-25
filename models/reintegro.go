@@ -11,7 +11,7 @@ import (
 )
 
 type Reintegro struct {
-	Id                   int                 `orm:"column(id);pk"`
+	Id                   int                 `orm:"column(id);pk;auto"`
 	AvanceLegalizacionId *AvanceLegalizacion `orm:"column(avance_legalizacion_id);rel(fk)"`
 	CausalReintegroId    int                 `orm:"column(causal_reintegro_id)"`
 	AreaFuncional        int                 `orm:"column(area_funcional)"`

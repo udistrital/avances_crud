@@ -11,7 +11,7 @@ import (
 )
 
 type SolicitudAvance struct {
-	Id                int       `orm:"column(id);pk"`
+	Id                int       `orm:"column(id);pk;auto"`
 	SolicitudId       int       `orm:"column(solicitud_id)"`
 	FechaCreacion     time.Time `orm:"column(fecha_creacion);type(timestamp without time zone)"`
 	FechaModificacion time.Time `orm:"column(fecha_modificacion);type(timestamp without time zone)"`

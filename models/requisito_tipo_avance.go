@@ -11,7 +11,7 @@ import (
 )
 
 type RequisitoTipoAvance struct {
-	Id                int         `orm:"column(id);pk"`
+	Id                int         `orm:"column(id);pk;auto"`
 	TipoAvanceId      *TipoAvance `orm:"column(tipo_avance_id);rel(fk)"`
 	RequisitoAvanceId int         `orm:"column(requisito_avance_id)"`
 	FechaCreacion     time.Time   `orm:"column(fecha_creacion);type(timestamp without time zone)"`
