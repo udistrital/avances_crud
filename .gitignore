@@ -2,6 +2,11 @@ avances_crud
 lastupdate.tmp
 main
 .scannerwork/
+.vscode/
+ejec.sh
+go.mod
+go.sum
+custom.env
 swagger/*.png
 swagger/*.html
 swagger/*.js
@@ -13,6 +18,3 @@ swagger/fonts/
 swagger/images/
 swagger/lang/
 swagger/lib/
-.vscode/
-go.mod
-go.sum
