@@ -293,7 +293,7 @@ ALTER TABLE avances.movimiento ADD CONSTRAINT movimientos_avance_legalizacion
 -- Reference: norma_tipo_avance (table: norma)
 ALTER TABLE avances.norma ADD CONSTRAINT norma_tipo_avance
     FOREIGN KEY (tipo_avance_id)
-    REFERENCES avances.tipo_avance (id)  
+    REFERENCES avances.tipo_avance (id) ON DELETE CASCADE
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
