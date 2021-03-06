@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/astaxie/beego/orm"
+	"github.com/udistrital/utils_oas/time_bogota"
 )
 
 type TipoAvance struct {
@@ -134,6 +135,7 @@ func UpdateTipoAvanceById(m *TipoAvance) (err error) {
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
+		m.FechaCreacion = time_bogota.TiempoCorreccionFormato(v.FechaCreacion)
 		if num, err = o.Update(m); err == nil {
 			fmt.Println("Number of records updated in database:", num)
 		}

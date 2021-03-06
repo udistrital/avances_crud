@@ -157,7 +157,6 @@ func (c *EspecificacionSolicitudTipoAvanceController) Put() {
 	id, _ := strconv.Atoi(idStr)
 	v := models.EspecificacionSolicitudTipoAvance{Id: id}
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		v.FechaCreacion = time_bogota.TiempoBogotaFormato()
 		v.FechaModificacion = time_bogota.TiempoBogotaFormato()
 		if err := models.UpdateEspecificacionSolicitudTipoAvanceById(&v); err == nil {
 			c.Data["json"] = map[string]interface{}{"Success": true, "Status": "200", "Message": "Update successful", "Data": v}
