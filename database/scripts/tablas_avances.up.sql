@@ -261,7 +261,7 @@ ALTER TABLE avances.registro_avance_legalizacion ADD CONSTRAINT consolidado_rete
 -- Reference: especificacion_tipo_avance_tipo_avance (table: especificacion_tipo_avance)
 ALTER TABLE avances.especificacion_tipo_avance ADD CONSTRAINT especificacion_tipo_avance_tipo_avance
     FOREIGN KEY (tipo_avance_id)
-    REFERENCES avances.tipo_avance (id)  
+    REFERENCES avances.tipo_avance (id) ON DELETE CASCADE
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
@@ -325,7 +325,7 @@ ALTER TABLE avances.reintegro ADD CONSTRAINT reintegro_avance_legalizacion
 -- Reference: requisito_tipo_avance_tipo_avance (table: requisito_tipo_avance)
 ALTER TABLE avances.requisito_tipo_avance ADD CONSTRAINT requisito_tipo_avance_tipo_avance
     FOREIGN KEY (tipo_avance_id)
-    REFERENCES avances.tipo_avance (id)  
+    REFERENCES avances.tipo_avance (id) ON DELETE CASCADE
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
