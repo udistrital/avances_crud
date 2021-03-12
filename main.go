@@ -8,7 +8,7 @@ import (
 
 	_ "github.com/udistrital/avances_crud/routers"
 	apistatus "github.com/udistrital/utils_oas/apiStatusLib"
-	"github.com/udistrital/utils_oas/customerrorv2"
+	"github.com/udistrital/utils_oas/customerror"
 )
 
 func main() {
@@ -35,7 +35,7 @@ func main() {
 		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: true,
 	}))
-	beego.ErrorController(&customerrorv2.CustomErrorController{})
+	beego.ErrorController(&customerror.CustomErrorController{})
 	apistatus.Init()
 	beego.Run()
 }
