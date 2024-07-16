@@ -20,3 +20,6 @@ ejec.sh
 swagger/**
 !swagger/*.json
 !swagger/*.yml
+
+go.mod
+go.sum
